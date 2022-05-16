@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10FBB5302832947E005673AF /* CalculadoraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FBB52F2832947E005673AF /* CalculadoraController.swift */; };
+		10FBB5322832D2F5005673AF /* AgregarCliente(POST).swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FBB5312832D2F5005673AF /* AgregarCliente(POST).swift */; };
+		10FBB5342832D9FD005673AF /* ClienteModelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FBB5332832D9FD005673AF /* ClienteModelo.swift */; };
+		10FBB5362832E572005673AF /* ConectApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FBB5352832E572005673AF /* ConectApi.swift */; };
+		10FBB5382832E74B005673AF /* GetClientes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FBB5372832E74B005673AF /* GetClientes.swift */; };
 		184ABEC92831A2F500A15A73 /* CalculadoraDeIMCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184ABEC82831A2F500A15A73 /* CalculadoraDeIMCApp.swift */; };
 		184ABECB2831A2F500A15A73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184ABECA2831A2F500A15A73 /* ContentView.swift */; };
 		184ABECD2831A2FB00A15A73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184ABECC2831A2FB00A15A73 /* Assets.xcassets */; };
@@ -15,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10FBB52F2832947E005673AF /* CalculadoraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculadoraController.swift; sourceTree = "<group>"; };
+		10FBB5312832D2F5005673AF /* AgregarCliente(POST).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AgregarCliente(POST).swift"; sourceTree = "<group>"; };
+		10FBB5332832D9FD005673AF /* ClienteModelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClienteModelo.swift; sourceTree = "<group>"; };
+		10FBB5352832E572005673AF /* ConectApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConectApi.swift; sourceTree = "<group>"; };
+		10FBB5372832E74B005673AF /* GetClientes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetClientes.swift; sourceTree = "<group>"; };
 		184ABEC52831A2F500A15A73 /* CalculadoraDeIMC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculadoraDeIMC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		184ABEC82831A2F500A15A73 /* CalculadoraDeIMCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculadoraDeIMCApp.swift; sourceTree = "<group>"; };
 		184ABECA2831A2F500A15A73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +68,11 @@
 				184ABED62831EDA400A15A73 /* CalculadoraView.swift */,
 				184ABECC2831A2FB00A15A73 /* Assets.xcassets */,
 				184ABECE2831A2FB00A15A73 /* Preview Content */,
+				10FBB52F2832947E005673AF /* CalculadoraController.swift */,
+				10FBB5312832D2F5005673AF /* AgregarCliente(POST).swift */,
+				10FBB5332832D9FD005673AF /* ClienteModelo.swift */,
+				10FBB5352832E572005673AF /* ConectApi.swift */,
+				10FBB5372832E74B005673AF /* GetClientes.swift */,
 			);
 			path = CalculadoraDeIMC;
 			sourceTree = "<group>";
@@ -141,8 +156,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				184ABECB2831A2F500A15A73 /* ContentView.swift in Sources */,
+				10FBB5302832947E005673AF /* CalculadoraController.swift in Sources */,
 				184ABEC92831A2F500A15A73 /* CalculadoraDeIMCApp.swift in Sources */,
+				10FBB5382832E74B005673AF /* GetClientes.swift in Sources */,
 				184ABED72831EDA400A15A73 /* CalculadoraView.swift in Sources */,
+				10FBB5342832D9FD005673AF /* ClienteModelo.swift in Sources */,
+				10FBB5322832D2F5005673AF /* AgregarCliente(POST).swift in Sources */,
+				10FBB5362832E572005673AF /* ConectApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,10 +288,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CalculadoraDeIMC/Preview Content\"";
-				DEVELOPMENT_TEAM = SSPM7J4LV3;
+				DEVELOPMENT_TEAM = AQU6FLQKMS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -279,6 +300,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -286,6 +308,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CalculadoraDeIMC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -297,10 +320,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CalculadoraDeIMC/Preview Content\"";
-				DEVELOPMENT_TEAM = SSPM7J4LV3;
+				DEVELOPMENT_TEAM = AQU6FLQKMS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -308,6 +332,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,6 +340,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CalculadoraDeIMC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

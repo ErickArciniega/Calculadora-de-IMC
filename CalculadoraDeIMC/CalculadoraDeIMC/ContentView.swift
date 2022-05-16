@@ -9,11 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     let CalculadoraVista = CalculadoraView()
+    let postUsers = AgregarClientePOST()
+    let getUsers = GetClientes()
     var body: some View {
         NavigationView{
             List {
                 NavigationLink("Calcular IMC", destination:CalculadoraVista)
-                Text("Usuarios de NutriNET")
+                NavigationLink("Agregar Clientes NutriNET", destination: postUsers)
+                NavigationLink("Obtener clientes", destination: getUsers)
             }
             .navigationTitle("Calculadora de IMC")
             .navigationBarTitleDisplayMode(.large)
