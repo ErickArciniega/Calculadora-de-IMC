@@ -8,24 +8,21 @@
 import SwiftUI
 
 struct GetClientes: View {
-    @State var models: [clienteModelo] = []
+    
+    @StateObject var viewModel = ConectApi()
+    
     var body: some View {
         VStack{
-            List (models, id: \.clienteID) { (model) in
-                HStack{
-                    Text(model.Nombre ?? "")
-                    Text(model.Apellidos ?? "")
+            Form{
+                ForEach(viewModel.clientes, id: \.clienteID){ cliente in
+                    Text(cliente.Nombre ?? "cliente")
                 }
             }
         }.onAppear(){
-            getUsersData()
+            viewModel.getAllUsers()
+            print("listo")
         }
     }
-    private func getUsersData(){
-            ConectApi.shared.getAllUsers { (response) in
-                self.models = response
-            }
-        }
 }
 
 

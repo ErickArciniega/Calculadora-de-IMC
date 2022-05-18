@@ -14,6 +14,7 @@ struct AgregarClientePOST: View {
     @State var userName: String = ""
     @State var email: String = ""
     @State var password: String = ""
+    @StateObject var viewModel = ConectApi()
     
     var body: some View {
         VStack {
@@ -26,7 +27,8 @@ struct AgregarClientePOST: View {
                 
                 Section{
                     Button{
-                        print("Hola")
+                        viewModel.postUser(nombre: nombre, apellidos: apellidos, userName: userName, email: email, password: password)
+                        Alert(title: Text("Error en el request"))
                     }label: {
                         Text("Enviar")
                     }

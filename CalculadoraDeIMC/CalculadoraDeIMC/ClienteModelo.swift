@@ -31,8 +31,8 @@ struct clienteModelo: Decodable{
     var tipoClienteID: Int?
     var Activo: Bool?
     var Orden: Int?
-    var fechaCreacion: Date?
-    var fechaActualizacion: Date?
+    var fechaCreacion: String?
+    var fechaActualizacion: String?
     var usuarioID: Int?
     var Visible: Bool?
     var deSistema: Bool?

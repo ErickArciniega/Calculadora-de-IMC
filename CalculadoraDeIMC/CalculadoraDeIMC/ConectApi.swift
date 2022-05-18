@@ -7,24 +7,56 @@
 
 import Foundation
 
-import Foundation
-let urlString = "http://187.188.122.85:8091/NutriNET/Cliente"
-
-class ConectApi {
-    static let shared = ConectApi()
+final class ConectApi: ObservableObject {
     
-    func getAllUsers(completed: @escaping([clienteModelo]) -> Void){
-        if let url = URL(string: urlString) {
-            URLSession.shared.dataTask(with: url) { data, response, error in
-                if let data = data {
-                    do {
-                        let res = try JSONDecoder().decode([clienteModelo].self, from: data)
-                        completed(res)
-                    } catch let error {
-                        print(error)
-                    }
+    let urlString = "http://187.188.122.85:8091/NutriNET/Cliente"
+    @Published var clientes: [clienteModelo] = []
+    
+    func getAllUsers(){
+        let url = URL(string: urlString)
+        URLSession.shared.dataTask(with: url!) { data, response, error in
+            if let _ = error{
+                print("Error")
+            }
+            
+            if let data = data,
+                let httpResponse = response as? HTTPURLResponse,
+                    httpResponse.statusCode == 200 {
+                let clientModel = try! JSONDecoder().decode([clienteModelo].self, from: data)
+                DispatchQueue.main.async {
+                    self.clientes = clientModel
                 }
-            }.resume()
-        }
+            }
+            
+        }.resume()
+    }
+    
+    func postUser(nombre: String, apellidos: String, userName: String, email: String, password: String){
+        let url = URL(string: urlString)
+        
+        let body: [String: Any] = ["Nombre": nombre, "Apellidos": apellidos, "Nombre_Usuario": userName, "Correo_Electronico": email, "Contraseña": password]
+        
+        let finalData = try! JSONSerialization.data(withJSONObject: body)
+        
+        var request = URLRequest(url: url!)
+        request.httpMethod = "POST"
+        request.httpBody = finalData
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            do{
+                if let data = data {
+                    let httpResponse = response as? HTTPURLResponse
+                    if httpResponse?.statusCode != 200{
+                        print("Error")
+                    }
+                }else{
+                    print("ERROR")
+                }
+            }catch (let error){
+                print("error: ", error.localizedDescription)
+            }
+            
+        }.resume()
     }
 }
